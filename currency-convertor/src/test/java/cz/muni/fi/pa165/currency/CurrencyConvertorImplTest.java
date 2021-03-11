@@ -41,6 +41,8 @@ public class CurrencyConvertorImplTest {
         assertThat(convertor.convert(CZK, EUR, new BigDecimal("0"))).isEqualTo(new BigDecimal("0.00"));
         assertThat(convertor.convert(CZK, EUR, new BigDecimal("250.3725"))).isEqualTo(new BigDecimal("10.01"));
         assertThat(convertor.convert(CZK, EUR, new BigDecimal("250.375"))).isEqualTo(new BigDecimal("10.02"));
+        assertThat(convertor.convert(CZK, EUR, new BigDecimal("28.125"))).isEqualTo(new BigDecimal("1.12"));
+
     }
 
     @Test

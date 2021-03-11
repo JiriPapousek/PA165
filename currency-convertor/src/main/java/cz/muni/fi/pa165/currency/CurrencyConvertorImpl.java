@@ -43,7 +43,7 @@ public class CurrencyConvertorImpl implements CurrencyConvertor {
         }
 
         BigDecimal result = sourceAmount.multiply(rate);
-        result = result.setScale(2, RoundingMode.HALF_UP);
+        result = result.setScale(2, RoundingMode.HALF_EVEN);
         return result;
     }
 
