@@ -13,7 +13,7 @@ import java.util.Arrays;
 @Named
 public class LoggingAspect {
 
-    @Around("execution(* *(..))")
+    @Around("execution(public * *(..))")
     public Object logDuration(ProceedingJoinPoint pjp) throws Throwable {
         StopWatch stopWatch = new StopWatch();
         System.err.println("Calling method " + pjp.getSignature().getName() + " of " + pjp.getTarget().getClass()
